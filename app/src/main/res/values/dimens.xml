@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_title">32sp</dimen>
+    <dimen name="margin_padding_small">8dp</dimen>
+    <dimen name="cornerRadius">5dp</dimen>
+    <dimen name="img_height_potrait">200dp</dimen>
+    <dimen name="margin_padding_medium">16dp</dimen>
+    <dimen name="margin_padding_large">24dp</dimen>
+    <dimen name="app_title">24sp</dimen>
+    <dimen name="description_text">14sp</dimen>
+</resources>

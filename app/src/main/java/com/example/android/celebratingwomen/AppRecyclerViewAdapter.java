@@ -15,10 +15,12 @@ public class AppRecyclerViewAdapter extends RecyclerView.Adapter<AppViewHolder> 
 
     private ArrayList<AppItem> appItemList;
     private Context context;
+    private RecyclerView recyclerView;
 
-    AppRecyclerViewAdapter(ArrayList<AppItem> appItemList, Context context) {
+    AppRecyclerViewAdapter(Context context, ArrayList<AppItem> appItemList, RecyclerView recyclerView) {
         this.appItemList = appItemList;
         this.context = context;
+        this.recyclerView = recyclerView;
     }
 
     @Override
@@ -26,7 +28,7 @@ public class AppRecyclerViewAdapter extends RecyclerView.Adapter<AppViewHolder> 
 
         View layoutView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_list_item, parent, false);
-        return new AppViewHolder(layoutView);
+        return new AppViewHolder(context, layoutView, recyclerView);
     }
 
     @Override
@@ -46,6 +48,7 @@ public class AppRecyclerViewAdapter extends RecyclerView.Adapter<AppViewHolder> 
                 }
             }
         });
+
     }
 
     @Override

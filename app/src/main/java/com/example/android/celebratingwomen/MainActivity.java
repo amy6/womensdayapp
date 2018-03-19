@@ -1,11 +1,7 @@
 package com.example.android.celebratingwomen;
 
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -13,6 +9,7 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(true);
 
-        AppRecyclerViewAdapter adapter = new AppRecyclerViewAdapter(appItemList, this);
+
+        AppRecyclerViewAdapter adapter = new AppRecyclerViewAdapter(this, appItemList, recyclerView);
         recyclerView.setAdapter(adapter);
 
     }
